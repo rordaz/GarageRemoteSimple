@@ -1,6 +1,6 @@
 # GarageRemoteSimple
 
-A Particle project named GarageRemoteSimple
+Garage Remote using Particle Photon with an HR SR04 to detect door status
 
 ## Welcome to your project!
 
