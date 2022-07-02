@@ -8,6 +8,8 @@ Garage Remote using Particle Photon with an HR SR04 to detect door status, notif
 
 Please visit [Particle Workbench](https://www.particle.io/workbench/) for further instrucctions.
 
+### Folder Struccture
+
 Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for GarageRemoteSimple.
 
 #### ```/src``` folder:  
