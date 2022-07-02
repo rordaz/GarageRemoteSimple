@@ -1,6 +1,21 @@
 # GarageRemoteSimple
 
-Garage Remote using Particle Photon with an HR SR04 to detect door status, notify via IFTT, Initiate commands from iOs Device
+Build a garage Remote using Particle Photon with an HR SR04 to detect door status, notify via IFTT, Initiate commands from iOs Device
+
+## What it is?
+
+A ParticleIO's Photon microprocessor that connect to HR SR04 (Ultrasonic sensor) to determine if the garage door is opened or closed, it also connect to a 5VDC relay to trigger the garage door's open and close commands.
+
+Additionally I can request this commands via IFTT, Siri via Shortcuts App, and alert using the Pushover's API (Push Notification)
+
+## Equipment and Tools
+
+- ParticleIO's Photon Microprocessor
+- HR SR04
+- HR SR04 3D printed Support
+- 5 Vdc Relay
+- Generic Garage Door Motor
+- 5 Vdc Power Supply and Cable
 
 ## Welcome to the Particle IO project using VSCode Extension
 
