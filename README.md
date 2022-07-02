@@ -1,8 +1,12 @@
 # GarageRemoteSimple
 
-Garage Remote using Particle Photon with an HR SR04 to detect door status
+Garage Remote using Particle Photon with an HR SR04 to detect door status, notify via IFTT, Initiate commands from iOs Device
 
-## Welcome to your project!
+## Welcome to the Particle IO project using VSCode Extension
+
+### Particle Workbench Installation
+
+Please visit [Particle Workbench](https://www.particle.io/workbench/) for further instrucctions.
 
 Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for GarageRemoteSimple.
 
