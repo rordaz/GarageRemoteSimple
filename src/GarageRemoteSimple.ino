@@ -130,39 +130,6 @@ void loop()
     
     pirSensorNow = millis();
     
-    //  if ((pirSensorNow - pirSensorlastTime > PIRSensorCheckInterval))
-    // {
-    //     pirSensorlastTime =  pirSensorNow;
-    //     if (PIRSensorStatus("x") == 1) {
-            
-    //         if (!lightStatus)
-    //         {
-    //             if (!snooze)
-    //                 Particle.publish("smart-home", "Movement Detected in Garage", 60, PRIVATE);
-    //             lightStatus = true;
-    //             triggeredStatus = 1;
-    //             // Particle.publish("tplink_cloud","1", PRIVATE); Turn Lights on #fixThis
-    //             delay(20000);
-    //         }else {
-    //             //Particle.publish("kasa-outlet", "...", PRIVATE);
-    //             //Particle.publish("pir-sensor", "Turn OFF Lights in Garage", 20, PUBLIC);'
-    //             //Particle.publish("smart-home", "Garage Lights off", 60, PRIVATE);
-    //             lightStatus = false;
-    //             triggeredStatus = 0;
-    //             // Particle.publish("tplink_cloud","0", PRIVATE);  Turn Lights off #fixThis
-    //             delay(20000);
-    //         }
-
-    //     }
-      
-    // }
-  
-    // MOTION DETECTION
-    // if (PIRSensorStatus("x") == 1) // 1 = Motion Detected
-    // {
-    //     Particle.publish("pir-sensor", "X_Lamp Triggered", 60, PRIVATE);
-    // }
-    
     doorSensorNow = millis();
 
     if ((doorSensorNow - doorSensorlastTime > eventCheckInterval) && !delayNotification)
@@ -187,18 +154,6 @@ void loop()
         // When door is open
         } else if (cm < 70 && cm > 40 && cm !=-1 && !snooze ){
             // Particle Notification
-             
-               
-            // if (getDoorStatus() == 1) {
-            //   // Allow one notification then wait 5 minutes
-            //   if (notificationCounter == 0){
-            //     _firstEventTime = millis();
-            //      delayNotification = true;
-            //      notificationCounter++ ; 
-            //       //Particle.publish("smart-home", "Garage just opened", 60, PRIVATE);
-            //     //   Particle.publish("garage_door", "Garage just opened", 60, PRIVATE);
-            //       doorOpen =  true;
-            //   } 
               if (!delayNotification)
                {
                    delayNotification = true;
@@ -214,7 +169,6 @@ void loop()
                   
                    doorOpen =  true;
                }
-            // }
         }
         // Testing Push Notification
         if (pushNotif)
@@ -424,15 +378,6 @@ int OpenGarage(String command) {
            //delay(30000);
            doorOpen = true;
        }
-        
-        // Particle.publish("smart-home",doorMessage, 60, PRIVATE);
-        // Particle.publish("garage_door",doorMessage); 
-        //delay(500);
-        
-        //if (digitalRead(Relay)){
-           //digitalWrite(led1,LOW);
-          // digitalWrite(Relay,LOW);
-        //}
         return 1;
     }
     else if (command=="off") {
