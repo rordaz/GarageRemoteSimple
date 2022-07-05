@@ -17,6 +17,16 @@ Additionally I can request this commands via IFTT, Siri via Shortcuts App, and a
 - Generic Garage Door Motor
 - 5 Vdc Power Supply and Cable
 
+## Setup IFTTT (Work in progress)
+
+Still working on this steps...
+
+### Trigger from IFTTT iOS App
+
+### Trigger from Siri 
+
+Use a IFTTT's webhook to acomplish this. 
+
 ## Welcome to the Particle IO project using VSCode Extension
 
 ### Particle Workbench Installation
