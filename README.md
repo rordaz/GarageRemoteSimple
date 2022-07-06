@@ -25,6 +25,8 @@ Still working on this steps...
 
 ### Trigger from Siri 
 
+![Step 1](resources\IFTTT-WEBHOOK-01.png)
+
 Use a IFTTT's webhook to acomplish this. 
 
 ## Welcome to the Particle IO project using VSCode Extension
