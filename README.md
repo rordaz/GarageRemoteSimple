@@ -1,12 +1,12 @@
 # GarageRemoteSimple
 
-Build a garage Remote using Particle Photon with an HR SR04 to detect door status, notify via IFTT, Initiate commands from iOs Device
+Build a garage Remote using [Particle](https://www.particle.io/) **Photon** with an HR SR04 to detect door status, notify via [IFTTT](https://ifttt.com/explore), Initiate commands from iOs Device
 
 ## What it is?
 
 A ParticleIO's Photon microprocessor that connect to HR SR04 (Ultrasonic sensor) to determine if the garage door is opened or closed, it also connect to a 5VDC relay to trigger the garage door's open and close commands.
 
-Additionally I can request this commands via IFTT, Siri via Shortcuts App, and alert using the Pushover's API (Push Notification)
+Additionally I can request this commands via IFTTT, Siri via Shortcuts App, and alert using the Pushover's API (Push Notification)
 
 ## Equipment and Tools
 
@@ -17,52 +17,56 @@ Additionally I can request this commands via IFTT, Siri via Shortcuts App, and a
 - Generic Garage Door Motor
 - 5 Vdc Power Supply and Cable
 
-## Setup IFTTT (Work in progress)
+## Steps
+
+ 1. Build Circuit
+ 2. Compile code
+    - Locally by Setting up the [Particle Workbench Installation](/WorkbenchSetup.md)
+    - Using Particle.io [Web IDE](https://login.particle.io/login?redirect=https://build.particle.io/build)
+ 3. Integrate to IFTTT
+    - [Trigger from IFTTT iOS App](#Trigger-from-IFTTT-iOS-App)
+    - [Trigger from Siri](#Trigger-from-Siri)
+
+## Integrate to IFTTT
 
 Still working on this steps...
 
 ### Trigger from IFTTT iOS App
 
-### Trigger from Siri 
+### Trigger from Siri
+
+Let's use a IFTTT's webhook to acomplish this, so Login into your [IFTTT](https://ifttt.com/explore) account
+
+Step 1: Create an Applet
+
+![Step 0](resources/IFTTT-WEBHOOK-00.png)
 
 ![Step 1](resources/IFTTT-WEBHOOK-01.png)
 
-Use a IFTTT's webhook to acomplish this. 
+Step 2: Choose a Service, enter web and select **Webhooks**
 
-## Welcome to the Particle IO project using VSCode Extension
+![Step 2](resources/IFTTT-WEBHOOK-02.png)
 
-### Particle Workbench Installation
+Step 3: Select **Receive a Web request**
 
-Please visit [Particle Workbench](https://www.particle.io/workbench/) for further instrucctions.
+![Step 3](resources/IFTTT-WEBHOOK-03.png)
 
-### Folder Struccture
+Step 4: Enter Event Name, you will use this in the Apple's Shortcut App.
 
-Every new Particle project is composed of 3 important elements that you'll see have been created in your project directory for GarageRemoteSimple.
+![Step 4](resources/IFTTT-WEBHOOK-04.png)
 
-#### ```/src``` folder:  
-This is the source folder that contains the firmware files for your project. It should *not* be renamed. 
-Anything that is in this folder when you compile your project will be sent to our compile service and compiled into a firmware binary for the Particle device that you have targeted.
+Step 5: Next **"Then That"** Add
 
-If your application contains multiple files, they should all be included in the `src` folder. If your firmware depends on Particle libraries, those dependencies are specified in the `project.properties` file referenced below.
+![Step 5](resources/IFTTT-WEBHOOK-05.png)
 
-#### ```.ino``` file:
-This file is the firmware that will run as the primary application on your Particle device. It contains a `setup()` and `loop()` function, and can be written in Wiring or C/C++. For more information about using the Particle firmware API to create firmware for your Particle device, refer to the [Firmware Reference](https://docs.particle.io/reference/firmware/) section of the Particle documentation.
+Step 6: Search Particle, and select it. You will be asked to sign into your [Particle](https://www.particle.io/) account
 
-#### ```project.properties``` file:  
-This is the file that specifies the name and version number of the libraries that your project depends on. Dependencies are added automatically to your `project.properties` file when you add a library to a project using the `particle library add` command in the CLI or add a library in the Desktop IDE.
+![Step 6](resources/IFTTT-WEBHOOK-06.png)
 
-## Adding additional files to your project
+Step 7: Choose an action, **Call a function**
 
-#### Projects with multiple sources
-If you would like add additional files to your application, they should be added to the `/src` folder. All files in the `/src` folder will be sent to the Particle Cloud to produce a compiled binary.
+![Step 7](resources/IFTTT-WEBHOOK-07.png)
 
-#### Projects with external libraries
-If your project includes a library that has not been registered in the Particle libraries system, you should create a new folder named `/lib/<libraryname>/src` under `/<project dir>` and add the `.h`, `.cpp` & `library.properties` files for your library there. Read the [Firmware Libraries guide](https://docs.particle.io/guide/tools-and-features/libraries/) for more details on how to develop libraries. Note that all contents of the `/lib` folder and subfolders will also be sent to the Cloud for compilation.
+Step 8: Select your Particle account, Function name, OpenGarage is name of the function created for the Device call "Garage". To finish click **Create action**
 
-## Compiling your project
-
-When you're ready to compile your project, make sure you have the correct Particle device target selected and run `particle compile <platform>` in the CLI or click the Compile button in the Desktop IDE. The following files in your project folder will be sent to the compile service:
-
-- Everything in the `/src` folder, including your `.ino` application file
-- The `project.properties` file for your project
-- Any libraries stored under `lib/<libraryname>/src`
+![Step 8](resources/IFTTT-WEBHOOK-08.png)
