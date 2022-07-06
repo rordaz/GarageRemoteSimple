@@ -26,12 +26,16 @@ Additionally I can request this commands via IFTTT, Siri via Shortcuts App, and 
  3. Integrate to IFTTT
     - [Trigger from IFTTT iOS App](#Trigger-from-IFTTT-iOS-App)
     - [Trigger from Siri](#Trigger-from-Siri)
+    - [Create Shortcut on iOS or MacOS](#Create-Shortcut-on-iOS-or-MacOS)
+ 4. Usage
+    - [Opening and Closing the garage](#Opening-and-Closing-the-garage)
+
 
 ## Integrate to IFTTT
 
-Still working on this steps...
-
 ### Trigger from IFTTT iOS App
+
+In progress...
 
 ### Trigger from Siri
 
@@ -70,3 +74,11 @@ Step 7: Choose an action, **Call a function**
 Step 8: Select your Particle account, Function name, OpenGarage is name of the function created for the Device call "Garage". To finish click **Create action**
 
 ![Step 8](resources/IFTTT-WEBHOOK-08.png)
+
+### Create Shortcut on iOS or MacOS
+
+In progress...
+
+### Opening and Closing the garage
+
+In progress...
