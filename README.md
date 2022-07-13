@@ -33,9 +33,16 @@ Additionally I can request this commands via IFTTT, Siri via Shortcuts App, and 
 
 ## Integrate to IFTTT
 
-### Trigger from IFTTT iOS App
+### Trigger from IFTTT iOS Widget Screen
 
-In progress...
+Create an Applet using the **Button Widget** to call the Particle device is useful when executing an action on the Particle's Photon from the iOS Widget Screen.
+
+I have published this applet on IFTTT for public use:
+
+[Open Garage with Particle Photon](https://ifttt.com/applets/V2J7XgrL-open-garage-with-particle-photon)
+
+![Step 0](resources/IFTTT-DO-BUTTON-00.png)
+
 
 ### Trigger from Siri
 
